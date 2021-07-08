@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'fonts';
+@import 'reset';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// html, body {
+//     font-family: 'Karla', sans-serif;
+//     font-weight: 400;
+//     background: white;
+//     color: $gray;
+// }
+
+// a {
+//     transition: color 0.25s ease;
+//     font-weight: 400;
+//     text-decoration: none;
+//     border-bottom: 1px solid $purple;
+//     padding-bottom: 2px;
+//     color: inherit;
+
+//     &:hover {
+//         color: $purple;
+//     }
+// }

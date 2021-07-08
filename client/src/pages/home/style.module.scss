@@ -1,0 +1,13 @@
+@import 'scss/_variables';
+
+.home {
+	.moon {
+		position: absolute;
+		left: -218px;
+		top: -25px;
+		right: 13px;
+		bottom: 0;
+		z-index: -1;
+		max-width: 1290px;
+	}
+}
