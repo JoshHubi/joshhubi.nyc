@@ -14,45 +14,17 @@ import React, {
 } from 'react'
 
 import {
-	Switch,
+	Routes,
 	Route,
 	useLocation
 } from 'react-router-dom'
 
 import LoadingBar from 'react-top-loading-bar'
 
-const home = lazy(() => import('pages/home'))
-const notFound = lazy(() => import('pages/not-found'))
+const Home = lazy(() => import('pages/home'))
+const NotFound = lazy(() => import('pages/not-found'))
 
-const routes = [
-	{
-		exact: true,
-		path: '/',
-		component: home
-	},
-	{
-		path: '*',
-		component: notFound
-	}
-]
-
-// Sub route wrapper
-function RouteWithSubRoutes (route: any) {
-	return (
-		<Route
-			path = { route.path }
-			exact = { route.exact }
-			render = { 
-				props => (
-					// pass the sub-routes down to keep nesting
-					<route.component { ... props } routes = { route.routes } />
-				)
-			}
-		/>
-	)
-}
-
-export default function Routes () {
+export default function AppRoutes () {
 	const { pathname } = useLocation()
 
 	// scroll to the top of the window BEFORE the dom is updated to prevent jank when switching routes
@@ -74,13 +46,10 @@ export default function Routes () {
 
 	return (
 		<Suspense fallback={<Loading />}>
-			<Switch>
-				{ 
-					routes.map ((route, i) => (
-						<RouteWithSubRoutes key = { i } { ... route } />
-					))
-				}
-			</Switch>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
 		</Suspense>
 	)
 }

@@ -6,14 +6,14 @@
  */
 
 import React from 'react'
-import { ReactTitle } from 'react-meta-tags'
+// import { ReactTitle } from 'react-meta-tags'
 
 import styles from './style.module.scss'
 
 export default function home () {
 	return (
 		<div className={styles.home}>
-			<ReactTitle title='Page Not Found - Josh Hubi'/>
+			{/* <ReactTitle title='Page Not Found - Josh Hubi'/> */}
 			{`help computer`}
 		</div>
 	)

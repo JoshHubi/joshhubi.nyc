@@ -6,7 +6,7 @@
  */
 
 import React from 'react'
-import Routes from 'router'
+import AppRoutes from 'router'
 
 import Header from 'components/header'
 import Footer from 'components/footer'
@@ -15,7 +15,7 @@ export default function App () {
 	return (
 		<div className="app">
 			<Header />
-			<Routes />
+			<AppRoutes />
 			<Footer />
 		</div>
 	)

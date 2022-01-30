@@ -1,8 +1,6 @@
 module.exports = {
-	mode: 'jit',
-	purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './static/index.html'],
-	darkMode: false,
-	theme: {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
 		fontFamily: {
 			'sans': 'Karla, sans-serif',
 			'crimson': 'Crimson Text, sans-serif'
@@ -14,8 +12,5 @@ module.exports = {
 			}
 		}
 	},
-	variants: {
-		extend: {},
-	},
-	plugins: [],
+  plugins: [],
 }
