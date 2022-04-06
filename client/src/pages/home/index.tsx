@@ -6,19 +6,25 @@
  */
 
 import React from 'react'
-// import { ReactTitle } from 'react-meta-tags'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import styles from './style.module.scss'
 import moon from 'assets/img/moon.svg'
+import me from 'assets/img/me.jpg'
 
 export default function home() {
 	return (
 		<div className={styles.home}>
-			{/* <ReactTitle title='I am Josh Hubi' /> */}
+			<Helmet>
+                <title>I am Josh Hubi</title>
+            </Helmet>
 			<div className="font-crimson py-20 max-w-[59rem] m-auto relative overflow-hidden">
-				<img className={styles.moon} src={moon} />
+				<img className={styles.moon} alt="moon" src={moon} />
 				<div className="text-center max-w-[42rem] m-auto text-[2.5rem] leading-[2.8rem]">
-					I am Josh Hubi, a full stack developer and technologist crafting <strong><em className="font-crimson italic">digital products</em></strong>
+					I am Josh Hubi <Link to="/about">
+						<img className="cursor-pointer inline-block align-bottom h-10 rounded-full sm:mx-0 sm:shrink-0 hover:scale-125 transition-all" alt="Josh Hubi" src={me} />
+						</Link>, a full stack developer and producer crafting <strong><em className="font-crimson italic">digital products</em></strong>
 				</div>
 			</div>
 		</div>
