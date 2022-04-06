@@ -11,7 +11,7 @@ import React from 'react'
 export default function Footer() {
 	return (
 		<div className="w-full sm:px-12 py-7 flex items-center border-t-2 border-gray-100 border-solid">
-			Copyright 2021
+			Copyright 2022
 		</div>
 	)
 }
