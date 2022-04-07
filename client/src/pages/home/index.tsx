@@ -31,6 +31,9 @@ export default function home() {
 			</div>
 
 			<div className="max-w-[1600px] mx-auto p-5">
+				<div className="pb-5 text-lg text-gray-400">
+					Selected works
+				</div>
 				<Grid />
 			</div>
 		</div>
