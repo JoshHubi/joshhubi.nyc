@@ -37,7 +37,6 @@ export default function Grid() {
 						</Link>
 					</div>
 				</div>
-				
 			</div>
 
 			<div className="flex justify-center my-20">
