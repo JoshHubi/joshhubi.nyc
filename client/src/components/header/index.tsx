@@ -12,7 +12,7 @@ import type { LinkProps } from 'react-router-dom'
 
 import { ReactComponent as Logo } from 'assets/img/logo.svg'
 
-function CustomLink({ children, to, ...props }: LinkProps) {
+function MenuLink({ children, to, ...props }: LinkProps) {
 	let resolved = useResolvedPath(to)
 	let match = useMatch({ path: resolved.pathname, end: true })
 
@@ -31,15 +31,17 @@ function CustomLink({ children, to, ...props }: LinkProps) {
 
 export default function Header() {
 	return (
-		<div className="w-full sm:px-12 py-7 flex items-center">
+		<div className="w-full flex items-center px-5 py-7 lg:px-12">
 			<div className="flex-1">
-				<Link to="/"><Logo /></Link>
+				<div className="w-fit">
+					<Link to="/"><Logo /></Link>
+				</div>
 			</div>
 			<div className="justify-end text-lg font-bold pr-2">
 				<ul className="flex space-x-7">
-					<CustomLink to="/">Work</CustomLink>
-					<CustomLink to="/about">About</CustomLink>
-					<CustomLink to="/contact">Contact</CustomLink>
+					<MenuLink to="/">Work</MenuLink>
+					<MenuLink to="/about">About</MenuLink>
+					<MenuLink to="/contact">Contact</MenuLink>
 				</ul>
 			</div>
 		</div>
