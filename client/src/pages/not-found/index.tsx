@@ -17,8 +17,8 @@ export default function home () {
                 <title>Page not found - Josh Hubi</title>
             </Helmet>
 			<div className="p-16">
-				<h2 className="text-7xl text-center font-semibold">Oops</h2>
-				<p className="text-center text-3xl">What you're looking for is not here so here's a cat <img className="inline-block align-bottom h-10 rounded-full sm:mx-0 sm:shrink-0 hover:scale-125 transition-all" alt="Cat" src="https://media0.giphy.com/media/jpbnoe3UIa8TU8LM13/200w.webp" /></p>
+				<h2 className="text-6xl text-center font-semibold">:(</h2>
+				<p className="text-center text-2xl">What you're looking for is not here BUT this cat is <img className="inline-block align-bottom h-10 rounded-full sm:mx-0 sm:shrink-0 hover:scale-125 transition-all" alt="Cat" src="https://media0.giphy.com/media/jpbnoe3UIa8TU8LM13/200w.webp" /></p>
 				<div className="flex justify-center mt-5">
 					<Button 
 						type="router"
