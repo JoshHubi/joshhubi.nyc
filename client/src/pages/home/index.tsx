@@ -5,17 +5,27 @@
  * @since 5/25/2021
  */
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import Grid from 'components/grid'
 
+import latestWorkItems from 'hooks/latest-work'
+
 import styles from './style.module.scss'
 import moon from 'assets/img/moon.svg'
 import me from 'assets/img/me.jpg'
 
-export default function home() {
+export default function Home() {
+	const [workItems, setWorkItems] = useState<any>([])
+	
+	useEffect(() => {
+		latestWorkItems(4).then((result) => {
+			setWorkItems(result)
+		})
+	}, [])
+
 	return (
 		<div className={styles.home}>
 			<Helmet>
@@ -34,7 +44,9 @@ export default function home() {
 				<div className="pb-5 text-lg text-gray-400">
 					Selected works
 				</div>
-				<Grid />
+				<Grid 
+					items={workItems}
+				/>
 			</div>
 		</div>
 	)
